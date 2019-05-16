@@ -7,12 +7,23 @@ var Cart = function(items) {
 };
 
 Cart.prototype.addItem = function(product, quantity) {
-  // TODO: Fill in this instance method to create a new CartItem and add it to this.items
-  
+
+  // Filled in this instance method to create a new CartItem and add it to this.items \\\\ Na'ama
+
+  var newCartItem = new CartItem(product,quantity);
+  this.items.push(newCartItem);
+
 };
 
 Cart.prototype.saveToLocalStorage = function() {
   // TODO: Fill in this instance method to save the contents of the cart to localStorage
+  
+  var stringData =  JSON.stringify(this.items);
+  localStorage.setItem('cartContentLS', stringData);
+
+  console.log('The cart content data stored in LS is ' + stringData);
+  
+
 };
 
 Cart.prototype.removeItem = function(item) {
