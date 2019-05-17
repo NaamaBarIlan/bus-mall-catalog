@@ -22,13 +22,17 @@ Cart.prototype.saveToLocalStorage = function() {
   localStorage.setItem('cartContentLS', stringData);
 
   console.log('The cart content data stored in LS is ' + stringData);
-  
 
 };
 
 Cart.prototype.removeItem = function(item) {
   // TODO: Fill in this instance method to remove one item from the cart.
   // Note: You will have to decide what kind of parameter to pass in here!
+
+  // if(removeItemFromCart(event)in cart.js is true){
+  //    remove the item from this.item?
+  // } 
+
 };
 
 var CartItem = function(product, quantity) {
